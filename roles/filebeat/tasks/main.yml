@@ -1,0 +1,19 @@
+---
+- name: add elastic gpg key
+  apt_key:
+    url: "https://packages.elastic.co/GPG-KEY-elasticsearch"
+
+- name: add beats repository
+  apt_repository:
+    repo: "deb https://artifacts.elastic.co/packages/5.x/apt stable main"
+    state: present
+
+- name: install filebeat
+  apt:
+    name: filebeat="5.3"
+    state: present
+
+- name: restart filebeat
+  service:
+    name: filebeat
+    state: restarted
