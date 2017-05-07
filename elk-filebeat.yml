@@ -2,7 +2,7 @@
 #
 # Playbook to install the ELK stack
 #
-- hosts: elk
+- hosts: secen-server
   become: yes
   roles:
    - { role: filebeat }
