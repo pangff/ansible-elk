@@ -10,7 +10,7 @@
 
 - name: install filebeat
   apt:
-    name: filebeat="5.3"
+    name: filebeat
     state: present
 
 - name: restart filebeat
