@@ -17,8 +17,6 @@
   template:
    src: input.conf.j2
    dest: /etc/logstash/conf.d/input.conf
-   owner: root
-   group: root
    mode: 0644
 # Configure Logstash 10-syslog-filter.conf config file
 - name: Configure  Filter
@@ -33,8 +31,6 @@
   template:
    src: output.conf.j2
    dest: /etc/logstash/conf.d/output.conf
-   owner: root
-   group: root
    mode: 0644
 # Start Logstash service
 - name: Start Logstash service
