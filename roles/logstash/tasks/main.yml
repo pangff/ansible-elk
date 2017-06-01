@@ -4,6 +4,11 @@
 #
 # Add Logstash APT repository
 # Adds the apt-key for Elasticsearch
+
+- name: enable java installed
+  apt:
+    name: default-jre
+
 - name: Add Elasticsearch apt-key
   apt_key:
    url: "https://packages.elastic.co/GPG-KEY-elasticsearch"
