@@ -6,6 +6,7 @@
 # Adds the apt-key for Elasticsearch
 
 - name: enable java installed
+  become: true
   apt:
     name: default-jre
 
