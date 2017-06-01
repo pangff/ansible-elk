@@ -3,9 +3,15 @@
 # Installing logstash
 #
 # Add Logstash APT repository
-- name: Adding logstash APT repository
+# Adds the apt-key for Elasticsearch
+- name: Add Elasticsearch apt-key
+  apt_key:
+   url: "https://packages.elastic.co/GPG-KEY-elasticsearch"
+   state: present
+# Add the Elasticsearch APT-repository
+- name: Adding Elasticsearch APT repository
   apt_repository:
-   repo: deb https://artifacts.elastic.co/p... stable main
+   repo: deb https://artifacts.elastic.co/packages/5.x/apt stable main
    state: present
 # Installing Logstash
 - name: Update repositories cache and install Logstash
