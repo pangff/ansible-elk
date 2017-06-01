@@ -24,6 +24,14 @@
    destfile: /etc/kibana/kibana.yml
    regexp: 'server.host:'
    line: 'server.host: 0.0.0.0'
+
+# Update kibana config file to only accept local connections
+- name: Updating the config file to restrict outside access
+  lineinfile:
+   destfile: /etc/kibana/kibana.yml
+   regexp: 'server.basePath:'
+   line: 'server.basePath: "/kibana"'
+
 # Enable Kibana service
 - name: Enabling Kibana service
   systemd:
