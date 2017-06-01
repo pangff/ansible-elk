@@ -6,7 +6,7 @@
 - name: Add Elasticsearch apt-key
   apt_key:
    url: "https://packages.elastic.co/GPG-KEY-elasticsearch"
-   state: presen
+   state: present
 
 # Add the Elasticsearch APT-repository
 - name: Adding Elasticsearch APT repository
