@@ -2,7 +2,7 @@
 #
 # Playbook to install the ELK stack
 #
-- hosts: scene-server
+- hosts: web-node
   become: yes
   roles:
    - { role: filebeat }
