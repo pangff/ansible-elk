@@ -23,6 +23,13 @@ filebeat.prospectors:
     #- c:\programdata\elasticsearch\logs\*
 
 
+  # filebeat update setting
+
+  close_inactive: 2160h
+  clean_inactive: 8760h
+  harvester_limit: 9
+  scan_frequency: 1s
+
 #================================ Outputs =====================================
 
 # Configure what outputs to use when sending the data collected by the beat.
